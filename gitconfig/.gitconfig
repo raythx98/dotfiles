@@ -1,19 +1,11 @@
 [user]
 	name = Ray Toh
-	email = ray.toh@thecarousell.com
+	email = raythx98@gmail.com
 [pager]
 	diff = diff-so-fancy | less
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[url "git@ssh.gitlab.carousellinternal.com:"]
-	insteadOf = https://gitlab.carou.sl/
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
 [pull]
 	rebase = false
 [init]
 	defaultBranch = master
-
