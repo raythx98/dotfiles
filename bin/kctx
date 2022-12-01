@@ -1,0 +1,10 @@
+#!/bin/bash
+
+current_context=$(kubectl config current-context)
+selection=($(kubectl config get-contexts --output=name --no-headers | fzf -1 --query="$@" --header="$current_context" | awk '{print $1}'))
+echo $selection
+if [ ${#selection[@]} -eq 1 ]; then
+    kubectl config use-context $selection
+else
+    exit 0
+fi

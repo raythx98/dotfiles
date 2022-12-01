@@ -1,0 +1,8 @@
+#!/bin/bash
+
+selection=($(docker container ls --format '{{.ID}}\t{{.Names}}\t{{.Status}}' | grep -v telepresence | fzf -1 --query="$@" | awk '{print $1}'))
+if [ ${#selection[@]} -eq 1 ]; then
+    docker logs -f $selection
+else
+    exit 0
+fi
