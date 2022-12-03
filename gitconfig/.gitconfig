@@ -9,3 +9,5 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[core]
+	excludesfile = /Users/raytoh/.gitignore_global
