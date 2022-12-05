@@ -13,7 +13,7 @@ macos-install-zsh:
 	brew install zsh
 
 macos-install-packages:
-	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck
+	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf fzf 
 
 macos-setup: macos-install-stow macos-install-brew macos-install-packages macos-install-zsh install-ohmyzsh install-python stow
 
