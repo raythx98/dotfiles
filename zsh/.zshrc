@@ -70,31 +70,45 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/bin
+# BIN
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/bin:$PATH
+export PATH=~/bin:$PATH
 
-export GOPATH="$HOME/code/go"
-export GOBIN="$GOPATH/bin"
-export GOPRIVATE=github.com/carousell/*
-export PATH="$GOBIN:$PATH"
-export PATH="$HOME/.gotools:$PATH"
-export PATH="/usr/local/opt/elasticsearch@21/bin:$PATH"
-export PATH=$PATH:/usr/local/sbin
+# SBIN
+export PATH=/usr/sbin:$PATH
+export PATH=/sbin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# HOMEBREW
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
-export godev="$GOPATH/src/github.com/carousell"
-export djdev="$HOME/code/django/carousell"
-export nodedev="$HOME/code/node/carousell"
-export otherdev="$HOME/code/others/carousell"
-export doc="$HOME/Documents/carousell"
+# FOR GO
+export PATH="$GOBIN:$PATH"
+export PATH="$HOME/.gotools:$PATH"
+export GOPATH="$HOME/code/go"
+export GOBIN="$GOPATH/bin"
+# export GOPRIVATE=github.com/carousell/*
 
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+# USEFUL PATHS
+export godev="$GOPATH/src"
+export pydev="$HOME/code/python"
+export jsdev="$HOME/code/js"
+export otherdev="$HOME/code/others"
+export doc="$HOME/Documents"
+export tmp="$HOME/tmp"
+
+# GCP USAGE
+# export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -114,7 +128,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias python=/usr/bin/python3
 alias g=git
 alias d=docker
 alias k=kubectl
@@ -124,8 +137,13 @@ alias view=nvim -R
 alias write=nvim
 alias edit=nvim
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --no-rehash -)"
+fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# GCP USAGE
+# # The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# # The next line enables shell command completion for gcloud.
+# if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
