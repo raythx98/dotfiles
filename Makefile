@@ -27,31 +27,34 @@ macos-install-packages:
 	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf fzf zsh stow
 
 install-ohmyzsh:
-	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	# manual step due to environment variable
+	# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 install-ohmyzsh-plugins:
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	# add to ~/.zshrc -> plugins=( [plugins...] zsh-syntax-highlighting)
+	## manual step due to environment variable
+	# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	## add to ~/.zshrc -> plugins=( [plugins...] zsh-syntax-highlighting)
+	## handled by stow
 
-	git clone https://github.com/zsh-users/zsh-autosuggestions $${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	# add to ~/.zshrc -> plugins=( [plugins...] zsh-autosuggestions)
+	## manual step due to environment variable
+	# git clone git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	## add to ~/.zshrc -> plugins=( [plugins...] zsh-autosuggestions)
+	## handled by stow
 
-	git clone https://github.com/zsh-users/zsh-completions $${ZSH_CUSTOM:-$${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-	# add to ~/.zshrc -> fpath+=$${ZSH_CUSTOM:-$${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-	# above           -> source "$ZSH/oh-my-zsh.sh"
+	## manual step due to environment variable
+	#   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+	## add to ~/.zshrc -> fpath+=$${ZSH_CUSTOM:-$${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+	## above           -> source "$ZSH/oh-my-zsh.sh"
+	## handled by stow
 
 install-python:
 	pyenv install 3.11.1
 	pyenv global system 3.11.1
 	brew install pyenv-virtualenv
 
-define NEWLINE
-
-
-endef
-
 generate-ssh-keys:
 	ssh-keygen -t ed25519 -C "raythx98@gmail.com"
+	# specify email
 	touch ~/.ssh/config
 	echo "Host *.github.com" >> ~/.ssh/config
 	echo "	AddKeysToAgent yes" >> ~/.ssh/config
