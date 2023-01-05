@@ -101,8 +101,10 @@ export GOBIN="$GOPATH/bin"
 
 # USEFUL PATHS
 export godev="$GOPATH/src"
+export dev="$HOME/code"
 export pydev="$HOME/code/python"
 export jsdev="$HOME/code/js"
+export dotnetdev="$HOME/code/dotnet"
 export otherdev="$HOME/code/others"
 export doc="$HOME/Documents"
 export tmp="$HOME/tmp"
@@ -136,6 +138,12 @@ alias vim=nvim
 alias view=nvim -R
 alias write=nvim
 alias edit=nvim
+
+# ^[[1;10D backward 1 word
+# ^[[1;10C forward 1 word
+
+# ^[[1;2D backward 1 letter
+# ^[[1;2C forward 1 letter
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --no-rehash -)"
