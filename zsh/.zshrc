@@ -93,10 +93,10 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # FOR GO
-export PATH="$GOBIN:$PATH"
-export PATH="$HOME/.gotools:$PATH"
 export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:$PATH"
+export PATH="$HOME/.gotools:$PATH"
 # export GOPRIVATE=github.com/carousell/*
 
 # USEFUL PATHS
