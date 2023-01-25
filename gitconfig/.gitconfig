@@ -8,7 +8,7 @@
 [pull]
 	rebase = false
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [core]
 	excludesfile = /Users/raytoh/.gitignore_global
 [filter "lfs"]
