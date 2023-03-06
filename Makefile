@@ -24,7 +24,7 @@ macos-manual-setup:
 macos-setup: macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python stow generate-ssh-keys
 
 macos-install-packages:
-	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow sqlc
+	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow sqlc node
 
 install-ohmyzsh:
 	# manual step due to environment variable
