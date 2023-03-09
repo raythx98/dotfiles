@@ -77,6 +77,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# HOMEBREW
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
 # BIN
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
@@ -88,16 +92,12 @@ export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-# HOMEBREW
-export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-
 # FOR GO
 export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.gotools:$PATH"
-# export GOPRIVATE=github.com/carousell/*
+export GOPRIVATE=github.com/GetGo-Technologies/*
 
 # USEFUL PATHS
 export godev="$GOPATH/src"
