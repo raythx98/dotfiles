@@ -110,6 +110,9 @@ export otherdev="$HOME/code/others"
 export doc="$HOME/Documents"
 export tmp="$HOME/tmp"
 
+# FOR DOCKER
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
 # GCP USAGE
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
