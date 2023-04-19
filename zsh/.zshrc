@@ -77,6 +77,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# HOMEBREW
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
 # BIN
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
@@ -87,10 +91,6 @@ export PATH=~/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
-
-# HOMEBREW
-export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
 
 # FOR GO
 export GOPATH="$HOME/code/go"
@@ -109,6 +109,9 @@ export playdev="$HOME/code/play"
 export otherdev="$HOME/code/others"
 export doc="$HOME/Documents"
 export tmp="$HOME/tmp"
+
+# FOR DOCKER
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # GCP USAGE
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
