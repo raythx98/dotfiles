@@ -11,6 +11,7 @@
 	defaultBranch = main
 [core]
 	excludesfile = /Users/raytoh/.gitignore_global
+	autocrlf=input
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
