@@ -159,3 +159,5 @@ fi
 
 # # The next line enables shell command completion for gcloud.
 # if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+source /Users/raytoh/.docker/init-zsh.sh || true # Added by Docker Desktop
