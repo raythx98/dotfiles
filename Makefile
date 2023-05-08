@@ -24,7 +24,8 @@ macos-manual-setup:
 macos-setup: macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python stow generate-ssh-keys
 
 macos-install-packages:
-	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow sqlc node ngrok/ngrok/ngrok swag
+	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow 
+	brew install mysql node ngrok/ngrok/ngrok swag mockery tree
 
 install-ohmyzsh:
 	# manual step due to environment variable
@@ -85,8 +86,8 @@ stow:
 # Printer & Scanner
 
 # iTerm
-# System-wide shortcut: Keys -> Hotkey
-# Other iTerm shortcuts: Keys -> Key Bindings
+# System-wide shortcut: Keys -> Hotkey (T: bring iTerm)
+# Other iTerm shortcuts: Keys -> Key Bindings (N: New window, D: Duplicate Tab)
 # Improve iTerm typing: Profiles -> Default -> Keys -> Key Mappings -> Presets -> Natural Text Editing
 # Prefer new window than tab: Advanced -> Windows -> Open files in new windows, not new tabs
 

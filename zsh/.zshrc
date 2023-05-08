@@ -102,13 +102,14 @@ export GOPRIVATE=github.com/GetGo-Technologies/*
 # USEFUL PATHS
 export godev="$GOPATH/src"
 export dev="$HOME/code"
-export pydev="$HOME/code/python"
-export jsdev="$HOME/code/js"
-export dotnetdev="$HOME/code/dotnet"
-export playdev="$HOME/code/play"
-export otherdev="$HOME/code/others"
+export pydev="$dev/python"
+export jsdev="$dev/js"
+export dotnetdev="$dev/dotnet"
+export playdev="$dev/play"
+export otherdev="$dev/others"
 export doc="$HOME/Documents"
 export tmp="$HOME/tmp"
+export codesync="$HOME/sync"
 
 # FOR DOCKER
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
