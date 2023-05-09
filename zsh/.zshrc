@@ -109,7 +109,7 @@ export playdev="$dev/play"
 export otherdev="$dev/others"
 export doc="$HOME/Documents"
 export tmp="$HOME/tmp"
-export codesync="$HOME/sync"
+export codesync="$dev/sync"
 
 # FOR DOCKER
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
