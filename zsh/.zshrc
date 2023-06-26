@@ -99,6 +99,9 @@ export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.gotools:$PATH"
 export GOPRIVATE=github.com/GetGo-Technologies/*
 
+# FOR .NET
+export PATH="/Users/raytoh/.dotnet/tools:$PATH"
+
 # USEFUL PATHS
 export godev="$GOPATH/src"
 export dev="$HOME/code"
