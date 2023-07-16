@@ -21,11 +21,11 @@ macos-manual-setup:
 ###################
 # Automated Steps #
 ###################
-macos-setup: macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python stow generate-ssh-keys
+macos-setup: macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python stow generate-ssh-keys install-tmux-plugins
 
 macos-install-packages:
 	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow 
-	brew install mysql node ngrok/ngrok/ngrok swag mockery tree redis
+	brew install node ngrok/ngrok/ngrok swag mockery tree
 
 install-ohmyzsh:
 	# manual step due to environment variable
@@ -47,6 +47,14 @@ install-ohmyzsh-plugins:
 	## add to ~/.zshrc -> fpath+=$${ZSH_CUSTOM:-$${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 	## above           -> source "$ZSH/oh-my-zsh.sh"
 	## handled by stow
+
+install-tmux-plugins:
+	# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	tmux new-session -d
+	tmux source ~/.tmux.conf
+	@echo "Press prefix + I (capital i, as in Install) to fetch the plugin."
+	@echo "Press prefix + U (capital u, as in Update) to update all plugins."
+	tmux kill-server
 
 install-python:
 	pyenv install 3.11.1

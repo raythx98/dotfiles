@@ -143,9 +143,10 @@ alias d=docker
 alias k=kubectl
 alias run=./run.sh
 alias vim=nvim
-alias view=nvim -R
+alias view="nvim -R"
 alias write=nvim
 alias edit=nvim
+alias tmux-rename-pane="tmux select-pane -T"
 
 # ^[[1;10D backward 1 word
 # ^[[1;10C forward 1 word
