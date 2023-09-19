@@ -115,6 +115,7 @@ export tmp="$HOME/tmp"
 export codesync="$dev/sync"
 
 # FOR DOCKER
+export DOCKER_HOST="unix://$HOME/.docker/run/docker.sock"
 # export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # GCP USAGE
