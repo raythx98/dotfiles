@@ -111,7 +111,7 @@ export dotnetdev="$dev/dotnet"
 export playdev="$dev/play"
 export otherdev="$dev/others"
 export doc="$HOME/Documents"
-export tmp="$HOME/tmp"
+export tmp="/tmp"
 export codesync="$dev/sync"
 
 # FOR DOCKER
@@ -140,6 +140,9 @@ export DOCKER_HOST="unix://$HOME/.docker/run/docker.sock"
 # For a full list of active aliases, run `alias`.
 
 alias g=git
+alias gp="git pull"
+alias gst="git stash"
+alias gsa="git stash apply"
 alias d=docker
 alias k=kubectl
 alias run=./run.sh
