@@ -21,11 +21,13 @@ macos-manual-setup:
 ###################
 # Automated Steps #
 ###################
-macos-setup: macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python stow generate-ssh-keys install-tmux-plugins
+macos-setup: 
+macos-install-packages install-ohmyzsh install-ohmyzsh-plugins install-python 
+stow generate-ssh-keys install-tmux-plugins
 
 macos-install-packages:
-	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go fzf zsh stow 
-	brew install node ngrok/ngrok/ngrok swag mockery tree mysql npm yarn
+	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go 
+	brew install fzf zsh stow node ngrok/ngrok/ngrok swag mockery tree mysql npm yarn sqlc
 
 install-ohmyzsh:
 	# manual step due to environment variable

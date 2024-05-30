@@ -95,6 +95,7 @@ export PATH=/usr/local/sbin:$PATH
 # FOR GO
 export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
+export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"
 export PATH="$GOBIN:$PATH"
 export PATH="$HOME/.gotools:$PATH"
 export GOPRIVATE=github.com/GetGo-Technologies/*
@@ -116,7 +117,6 @@ export codesync="$dev/sync"
 
 # FOR DOCKER
 export DOCKER_HOST="unix://$HOME/.docker/run/docker.sock"
-# export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # GCP USAGE
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
