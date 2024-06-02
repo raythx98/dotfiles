@@ -27,7 +27,7 @@ stow generate-ssh-keys install-tmux-plugins
 
 macos-install-packages:
 	brew install git neovim tmux htop go wget pyenv diff-so-fancy ag jq shellcheck protobuf protoc-gen-go 
-	brew install fzf zsh stow node ngrok/ngrok/ngrok swag mockery tree mysql npm yarn sqlc
+	brew install fzf zsh stow node ngrok/ngrok/ngrok swag mockery tree mysql npm yarn sqlc golang-migrate
 
 install-ohmyzsh:
 	# manual step due to environment variable
