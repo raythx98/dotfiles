@@ -162,6 +162,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --no-rehash -)"
 fi
 
+eval "$(direnv hook zsh)"
+
 # GCP USAGE
 # # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/raytoh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
